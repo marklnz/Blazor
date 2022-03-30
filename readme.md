@@ -6,7 +6,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 -   [Overview](#overview)
     -   [The challenge](#the-challenge)
-    -   [Screenshot](#screenshot)
+    -   [Screenshots](#screenshots)
     -   [Links](#links)
 -   [My process](#my-process)
     -   [Built with](#built-with)
@@ -29,22 +29,20 @@ Users should be able to:
 -   Select and submit a number rating
 -   See the "Thank you" card state after submitting a rating
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
+Dark mode:
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Dark mode](./wwwroot/images/screenshot-dark.jpg)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
+Light mode:
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Light mode](./wwwroot/images/screenshot-light.jpg)
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [https://github.com/marklnz/BlazorRatingCard](https://github.com/marklnz/BlazorRatingCard)
+-   Live Site URL: [https://markl.nz/BlazorRatingCard](https://markl.nz/BlazorRatingCard)
 
 ## My process
 
@@ -55,61 +53,39 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 -   Flexbox
 -   CSS Grid
 -   Mobile-first workflow
--   [React](https://reactjs.org/) - JS library
--   [Next.js](https://nextjs.org/) - React framework
--   [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+-   Automated detection of light/dark mode using `prefers-color-scheme` media query
+-   [Blazor WASM](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor/) - Microsoft's SPA framework that allows compilation of C# code to Web Assembly
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was a fun experiment that allowed me to test where I'm at with my CSS skills. I've done a fair amount of CSS over the years but most of this has involved using pre-built CSS frameworks. With this challenge I wrote the CSS from scratch and learnt a bit about using CSS Custom Properties in particular.
 
-To see how you can add code snippets, see below:
+As I'm a big fan of the Blazor WASM framework also, I thought I'd go down that path rather once I'd done the basic challenge with Javascript, which was my first step. Thanks to the ability of Blazor to control the DOM, as well as to respond to events, I was able to build this version without using javascript at all.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+I also took the opportunity to build the rating card as a component rather than including the markup and styles in the main "site".
 
-```css
-.proud-of-this-css {
-    color: papayawhip;
-}
-```
+Finally, I was able to experiment with the `prefers-color-scheme` media query to detect light/dark mode from the OS, and set colors accordingly.
 
-```js
-const proudOfThisFunc = () => {
-    console.log('🎉');
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I have also hosted the demo site in Github Pages and utilised Github Actions to build and deploy it. There were some learnings there due to the fact that this is the first time I've hosted a Blazor WASM site on Github Pages, as well as my first attempt at using Github Actions.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I will continue to experiment with the light/dark mode settings by adding a toggle indicator that allows the user to change between the two without needing to resort to using the browser developer tools or the OS to change it.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I would also like to use this project to learn more about packaging components for Blazor. I have the markup, C# code, and css styles grouped together currently, but I do not yet have the images located with the component itself. I intend to co-locate these and will also look at packaging the component in a separate component library and referencing it from the main site project.
 
 ### Useful resources
 
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+-   [How do I deploy a Blazor WebAssembly application to GitHub pages?](https://www.syncfusion.com/faq/blazor/host-and-deploy/how-do-i-deploy-a-blazor-webassembly-application-to-github-pages) - This blog entry from Syncfusion helped me work out the kinks in the deployment to Github pages. Because Pages is primarily intended for use with the Jekyll site generator, there are a couple of gotchas when deploying Blazor and this blog covered it all for me.
+-   [Nice resource on a light/dark mode toggle from Thomas Steiner on http://web.dev](https://web.dev/prefers-color-scheme/#dark-mode-but-add-an-opt-out) - A very thorough article that includes
+    reasoning on why dark mode is worth supporting, as well as links to a custom web component Thomas has built that provides users with a toggle on the page itself.
+-   [Using CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) All about CSS Custom Properties from the Mozilla Developer Network
 
 ## Author
 
--   Website - [Add your name here](https://www.your-site.com)
--   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
--   Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+-   Website - [Mark Lawrence](https://markl.nz)
+-   Frontend Mentor - [@marklnz](https://www.frontendmentor.io/profile/marklnz)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I'd just like to acknowledge [Frontend Mentor](https://www.frontendmentor.io), for publishing these challenges. It's a great resource both to challenge yourself, and to get inspiration from.
