@@ -23,7 +23,7 @@
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/
+[Rr]elease/wwwroot
 [Rr]eleases/
 x64/
 x86/
