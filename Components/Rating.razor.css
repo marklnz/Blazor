@@ -1,6 +1,7 @@
 .thankyou-card,
 .rating-card {
     max-width: 430px;
+    min-width: 430px;
     border-radius: 20px;
     background-color: var(--color-bg);
     color: var(--color-fg);
