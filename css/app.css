@@ -57,7 +57,7 @@
 }
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         /* dark scheme color variables */
         --color-bg: var(--color-dark-blue);
